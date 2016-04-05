@@ -1,0 +1,30 @@
+{
+  "name": "react-native-oauth2",
+  "version": "0.0.1",
+  "description": "Enables easy OAuth2 integration using the password flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nlively/react-native-oauth2.git"
+  },
+  "keywords": [
+    "oauth2",
+    "react-native"
+  ],
+  "author": "Noah Lively",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nlively/react-native-oauth2/issues"
+  },
+  "dependencies": {
+    "events": "^1.1.0",
+    "flux": "^2.1.1",
+    "jquery-param": "^0.2.0",
+    "moment": "^2.12.0",
+    "object-assign": "^4.0.1",
+    "q": "^1.4.1"
+  }
+}
