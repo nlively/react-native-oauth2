@@ -1,3 +1,4 @@
+import APIHelper from './lib/APIHelper';
 import OAuth2API from './lib/OAuth2API';
 import OAuth2Token from './lib/OAuth2Token';
 import OAuth2SessionStore from './lib/OAuth2SessionStore';
@@ -14,6 +15,9 @@ function _onNoValidToken(callback) {
 module.exports = {
   OAuth2API: OAuth2API,
   OAuth2Token: OAuth2Token,
+  authenticate: (username, password) => {
+    OAuth2API.obtainAccessTokenWithCredentials(username, password);
+  },
   reset: () => {
     Dispatcher.dispatch({actionType: 'no_valid_token'});
   },
@@ -24,5 +28,6 @@ module.exports = {
   },
   initializeSession: (token) => {
     OAuth2SessionStore.initFromStorage(token);
-  }
+  },
+  authenticatedRequest: APIHelper.authenticatedRequest,
 };
