@@ -26,6 +26,9 @@ module.exports = {
   initializeConfig: (client_id, client_secret, token_uri) => {
     OAuth2API.init(client_id, client_secret, token_uri);
   },
+  setEncodingType: (type) => {
+    OAuth2API.setEncodingType(type);
+  },
   initializeSession: (token) => {
     OAuth2SessionStore.initFromStorage(token);
   },
