@@ -16,7 +16,7 @@ module.exports = {
   OAuth2API: OAuth2API,
   OAuth2Token: OAuth2Token,
   authenticate: (username, password) => {
-    OAuth2API.obtainAccessTokenWithCredentials(username, password);
+    return OAuth2API.obtainAccessTokenWithCredentials(username, password);
   },
   reset: () => {
     Dispatcher.dispatch({actionType: 'no_valid_token'});
